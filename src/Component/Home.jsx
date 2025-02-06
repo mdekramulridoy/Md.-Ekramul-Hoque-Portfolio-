@@ -1,12 +1,12 @@
 import React from "react";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import animationData from "../../public/web.json";
-import Lottie from "lottie-react";
+// import animationData from "../../public/web.json";
+// import Lottie from "lottie-react";
 
 const Home = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:justify-between mt-28 lg:mt-40 px-6 lg:px-20">
+    <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-5 mt-28 lg:mt-40 px-6 lg:px-20">
       {/* Left Section: Text Content */}
       <div className="text-center lg:text-left max-w-lg">
         <div className="hidden lg:block">
@@ -74,10 +74,17 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Center Section: Animation */}
+      {/* <div>
+      <Lottie animationData={animationData} loop={true} />
+      </div> */}
+
+
+
       {/* Right Section: Animation */}
       <div className="relative mt-10 lg:mt-0">
         <div className="w-80 lg:w-96">
-          <Lottie animationData={animationData} loop={true} />
+          <img className="rounded-full" src="https://i.ibb.co.com/bMzNdKdt/Profile-picture.jpg" alt="" />
         </div>
       </div>
     </div>

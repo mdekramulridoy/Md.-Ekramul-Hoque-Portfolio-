@@ -10,7 +10,11 @@
     ],
     "liveLink": "https://air-ticket-client.web.app/visas",
     "githubRepo": "https://github.com/mdekramulridoy/Air-Ticket-Client",
-    "details": "A user-friendly Visa Navigator Portal to simplify the process of checking visa requirements."
+    "details": "A user-friendly Visa Navigator Portal to simplify the process of checking visa requirements.",
+    "mainTechnologyStack": ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    "briefDescription": "A comprehensive platform that helps users check visa requirements efficiently.",
+    "challengesFaced": "Handling real-time API integrations for visa requirements and ensuring accuracy.",
+    "potentialImprovements": "Implementing AI-powered chatbot support for visa-related queries and expanding country-specific features."
   },
   {
     "id": 2,
@@ -23,9 +27,12 @@
     ],
     "liveLink": "https://book-library-client-server.web.app/",
     "githubRepo": "https://github.com/mdekramulridoy/Book-Library-Client",
-    "details": "A well-renowned school requires the development of a Library Management System"
+    "details": "A well-renowned school requires the development of a Library Management System.",
+    "mainTechnologyStack": ["React.js", "Node.js", "Express.js", "MongoDB", "Firebase Authentication"],
+    "briefDescription": "An advanced library management system that helps schools manage book borrowing and returning efficiently.",
+    "challengesFaced": "Managing real-time database updates for book availability and user authentication.",
+    "potentialImprovements": "Adding an AI-based recommendation system for books and implementing an advanced search filter."
   },
-
   {
     "id": 3,
     "title": "Language Learning",
@@ -37,6 +44,10 @@
     ],
     "liveLink": "https://learning-different-language.web.app/",
     "githubRepo": "https://github.com/mdekramulridoy/Lingo-Bingo",
-    "details": "Lingo Bingo is an interactive language learning application."
+    "details": "Lingo Bingo is an interactive language learning application.",
+    "mainTechnologyStack": ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Authentication"],
+    "briefDescription": "An interactive web application that helps users learn multiple languages through engaging exercises.",
+    "challengesFaced": "Integrating multimedia content and ensuring a seamless user experience across different japanese words.",
+    "potentialImprovements": "Adding AI-powered personalized learning paths and improve voice recognition for pronunciation practice."
   }
 ]

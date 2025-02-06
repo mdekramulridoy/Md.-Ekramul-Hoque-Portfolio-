@@ -25,17 +25,14 @@ const Library = () => {
       .finally(() => setLoading(false));
   }, [id]);
 
-  // Loading state
   if (loading) {
     return <div className="text-center text-xl font-semibold p-6">Loading...</div>;
   }
 
-  // Error state
   if (error) {
     return <div className="text-center text-red-600 text-xl font-semibold p-6">{error}</div>;
   }
 
-  // Slick carousel settings
   const settings = {
     dots: true,
     infinite: true,
@@ -51,26 +48,31 @@ const Library = () => {
     <div className="p-6 md:px-20 flex flex-col items-center">
       <h1 className="text-3xl font-bold text-gray-900 mb-6">{project.title}</h1>
 
-      {/* Project Container */}
       <div className="bg-white rounded-xl shadow-xl overflow-hidden w-full max-w-3xl">
-        {/* Carousel */}
         <div className="w-full">
           <Slider {...settings}>
             {project.images.map((img, index) => (
               <div key={index} className="w-full">
-                <img
-                  src={img}
-                  alt={`Slide ${index + 1}`}
-                  className="w-full h-96 object-cover"
-                />
+                <img src={img} alt={`Slide ${index + 1}`} className="w-full h-96 object-cover" />
               </div>
             ))}
           </Slider>
         </div>
 
-        {/* Project Details */}
         <div className="p-6 text-center">
           <p className="text-gray-700 mb-4">{project.details}</p>
+          <p className="text-gray-700 mb-2 font-semibold">Main Technology Stack:</p>
+          <ul className="flex flex-wrap justify-center gap-2 mb-4">
+            {project.mainTechnologyStack.map((tech, index) => (
+              <li key={index} className="bg-gray-200 px-3 py-1 rounded-lg text-sm">{tech}</li>
+            ))}
+          </ul>
+          <p className="text-gray-700 mb-2 font-semibold">Brief Description:</p>
+          <p className="text-gray-600 mb-4">{project.briefDescription}</p>
+          <p className="text-gray-700 mb-2 font-semibold">Challenges Faced:</p>
+          <p className="text-gray-600 mb-4">{project.challengesFaced}</p>
+          <p className="text-gray-700 mb-2 font-semibold">Potential Improvements:</p>
+          <p className="text-gray-600 mb-4">{project.potentialImprovements}</p>
           <div className="flex justify-center gap-4">
             {project.liveLink && (
               <a
@@ -96,7 +98,6 @@ const Library = () => {
         </div>
       </div>
 
-      {/* Back to Home Button */}
       <div className="mt-6">
         <Link
           to="/"

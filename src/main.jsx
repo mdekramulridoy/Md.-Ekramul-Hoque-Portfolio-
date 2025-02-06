@@ -10,9 +10,8 @@ import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import NotFound from "./NotFoundPage/NotFound";
 import "./index.css";
-import Language from "./Details/Language";
-import AirTicket from "./Details/AirTicket";
 import Library from "./Details/Library";
+
 
 const router = createBrowserRouter([
   {
@@ -86,25 +85,25 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  {
-    path: "3",
-    element: (
-      <>
-        <Title title="Details | Learning language" />
-        <Language />
-      </>
-    ),
-  },
+  // {
+  //   path: "3",
+  //   element: (
+  //     <>
+  //       <Title title="Details | Learning language" />
+  //       <Language />
+  //     </>
+  //   ),
+  // },
 
-  {
-    path: "2",
-    element: (
-      <>
-        <Title title="Details | Air Ticket" />
-        <AirTicket />
-      </>
-    ),
-  },
+  // {
+  //   path: "2",
+  //   element: (
+  //     <>
+  //       <Title title="Details | Air Ticket" />
+  //       <AirTicket />
+  //     </>
+  //   ),
+  // },
   
   {
     path: "1",
