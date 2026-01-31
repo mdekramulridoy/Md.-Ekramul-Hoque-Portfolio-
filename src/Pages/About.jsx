@@ -1,22 +1,61 @@
-import React from 'react';
+import React from "react";
 
 const About = () => {
   return (
-    <div className="py-10 lg:py-20 bg-[#15a5ff15] text-center rounded-lg my-6">
-      <h2 className="text-4xl font-bold mb-6 text-[#15A6FF]">About Me</h2>
-      
-      <p className="text-lg text-gray-700 mb-4 md:mx-32 mx-10">
-        I'm <span className="font-semibold text-[#15A6FF]">Md. Ekramul Hoque</span>, a dedicated <strong>Full-Stack Developer (MERN)</strong> with a passion for creating scalable, high-performance web applications. With a strong foundation in frontend and backend technologies, I specialize in building seamless, user-friendly digital experiences.
-      </p>
+    <section className="my-10 lg:my-20 px-4 sm:px-6 lg:px-20">
+      <div className="rounded-2xl bg-base-100 border border-primary/20 shadow-lg 
+                      py-8 sm:py-10 lg:py-16 text-center">
 
-      <p className="text-lg text-gray-700 mb-4 md:mx-32 mx-10">
-        My expertise includes <strong>React.js, Next.js, Tailwind CSS, Node.js, Express.js, and MongoDB</strong>. I enjoy problem-solving and thrive in dynamic environments where I can continuously learn and apply modern web technologies to real-world applications.
-      </p>
+        {/* Title */}
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl 
+                       font-bold mb-4 sm:mb-6 text-primary">
+          About Me
+        </h2>
 
-      <p className="text-lg text-gray-700 md:mx-32 mx-10">
-        Beyond coding, I run the <strong>‘EH Science Club’</strong> YouTube channel with <strong>40K+ subscribers</strong>, where I share insights on space and science. I am always open to collaborations and new challenges that push the boundaries of innovation.
-      </p>
-    </div>
+        {/* Paragraph 1 */}
+        <p className="text-sm sm:text-base lg:text-lg 
+                      text-base-content mb-4 max-w-4xl mx-auto px-1 sm:px-0">
+          I’m{" "}
+          <span className="font-semibold text-primary">
+            Md. Ekramul Hoque
+          </span>
+          , a dedicated{" "}
+          <span className="font-semibold">
+            Full-Stack Developer (MERN)
+          </span>{" "}
+          with a strong passion for building scalable, high-performance web
+          applications. I focus on creating seamless, user-friendly digital
+          experiences with clean and maintainable code.
+        </p>
+
+        {/* Paragraph 2 */}
+        <p className="text-sm sm:text-base lg:text-lg 
+                      text-base-content mb-4 max-w-4xl mx-auto px-1 sm:px-0">
+          My technical expertise includes{" "}
+          <span className="font-semibold">
+            React.js, Next.js, Tailwind CSS, Node.js, Express.js, and MongoDB
+          </span>
+          . I enjoy solving complex problems and continuously learning modern
+          web technologies to deliver real-world solutions.
+        </p>
+
+        {/* Paragraph 3 */}
+        <p className="text-sm sm:text-base lg:text-lg 
+                      text-base-content max-w-4xl mx-auto px-1 sm:px-0">
+          Beyond development, I run the{" "}
+          <span className="font-semibold text-primary">
+            EH Science Club
+          </span>{" "}
+          YouTube channel with{" "}
+          <span className="font-semibold">
+            250K+ subscribers
+          </span>
+          , where I share insights on space and science. I’m always open to
+          collaboration and challenges that drive innovation.
+        </p>
+
+      </div>
+    </section>
   );
 };
 

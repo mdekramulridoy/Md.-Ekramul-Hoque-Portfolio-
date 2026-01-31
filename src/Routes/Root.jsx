@@ -19,7 +19,7 @@ const Root = () => {
         <div id="experiences">
           <Experiences />
         </div>
-        <div id="project">
+        <div id="projects">
           <Project />
         </div>
         <div id="contact">

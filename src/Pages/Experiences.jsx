@@ -19,45 +19,58 @@ import {
   SiReactrouter,
 } from "react-icons/si";
 
-// All Skills Combined in One List
+/* =========================
+   Skills Data
+========================= */
 const allSkills = [
   { name: "React", icon: <FaReact /> },
-  { name: "HTML", icon: <FaHtml5 /> },
-  { name: "CSS", icon: <FaCss3Alt /> },
+  { name: "HTML5", icon: <FaHtml5 /> },
+  { name: "CSS3", icon: <FaCss3Alt /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   { name: "React Router", icon: <SiReactrouter /> },
   { name: "Next.js", icon: <SiNextdotjs /> },
   { name: "React Query", icon: <SiReactquery /> },
-  { name: "Axios Interceptor", icon: <SiAxios /> },
+  { name: "Axios", icon: <SiAxios /> },
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "MongoDB", icon: <SiMongodb /> },
   { name: "Express.js", icon: <SiExpress /> },
   { name: "Java", icon: <FaJava /> },
-  { name: "Database", icon: <FaDatabase /> },
+  { name: "Databases", icon: <FaDatabase /> },
   { name: "DaisyUI", icon: <SiDaisyui /> },
 ];
 
-// Continuous Infinite Scrolling Component
-const InfiniteScroll = ({ skills }) => {
+/* =========================
+   Infinite Scroll Row
+========================= */
+const InfiniteScroll = ({ skills, reverse = false }) => {
   return (
-    <div className="overflow-hidden w-full relative py-4">
+    <div className="overflow-hidden w-full py-4 sm:py-6">
       <motion.div
-        className="flex space-x-6"
-        animate={{ x: ["-100%", "0%"] }}
+        className="flex gap-4 sm:gap-6"
+        animate={{ x: reverse ? ["0%", "-100%"] : ["-100%", "0%"] }}
         transition={{
           repeat: Infinity,
-          duration: 20, 
+          duration: 28,
           ease: "linear",
         }}
       >
-        {/* Twice Render for Continuous Effect */}
         {[...skills, ...skills].map((skill, index) => (
           <div
             key={index}
-            className="bg-[#15A6FF] p-6 min-w-[180px] lg:min-w-[250px] rounded-lg shadow-lg text-white transition duration-300 flex flex-col items-center"
+            className="
+              min-w-[140px] sm:min-w-[170px] lg:min-w-[240px]
+              rounded-xl bg-primary text-white
+              p-4 sm:p-5 lg:p-6
+              shadow-lg flex flex-col items-center justify-center gap-1 sm:gap-2
+              hover:scale-105 transition
+            "
           >
-            <div className="text-4xl mb-2">{skill.icon}</div>
-            <h3 className="font-semibold text-xl">{skill.name}</h3>
+            <div className="text-2xl sm:text-3xl lg:text-4xl">
+              {skill.icon}
+            </div>
+            <p className="text-sm sm:text-base lg:text-lg font-semibold text-center">
+              {skill.name}
+            </p>
           </div>
         ))}
       </motion.div>
@@ -65,15 +78,32 @@ const InfiniteScroll = ({ skills }) => {
   );
 };
 
-// Main Component
+/* =========================
+   Main Component
+========================= */
 const Experiences = () => {
   return (
-    <div className="container mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-8 text-[#15A6FF]">
-        My Skills & Experience
-      </h1>
-      <InfiniteScroll skills={allSkills} />
-    </div>
+    <section
+      id="experiences"
+      className="my-12 sm:my-16 lg:my-24 px-4 sm:px-6 lg:px-20"
+    >
+      {/* Section Header */}
+      <div className="text-center mb-8 sm:mb-10">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3">
+          Skills & Experience
+        </h2>
+        <p className="text-base-content text-sm sm:text-base lg:text-lg max-w-2xl mx-auto">
+          A snapshot of the technologies and tools I use to build modern,
+          scalable, and high-performance web applications.
+        </p>
+      </div>
+
+      {/* Skills Animation */}
+      <div className="space-y-3 sm:space-y-4">
+        <InfiniteScroll skills={allSkills} />
+        <InfiniteScroll skills={allSkills} reverse />
+      </div>
+    </section>
   );
 };
 
